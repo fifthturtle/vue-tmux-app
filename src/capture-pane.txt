@@ -1,0 +1,1581 @@
+manpath: can't set the locale; make sure $LC_* and $LANG are correct
+[jdefamio@dev3 tmux-monitor-logging]$ tmux list-windows -t logging -F "#{window_name} | #{window_id}"
+jdefamio@dev3:~/workspace/tmux/tmux-monitor-logging | @3
+my-window | @25
+[jdefamio@dev3 tmux-monitor-logging]$ tmux selectw -t '@3'
+[jdefamio@dev3 tmux-monitor-logging]$ tmux rename-window -t '@3' my-window
+[jdefamio@dev3 tmux-monitor-logging]$ tmux rename-window -t '@3' my-window
+[jdefamio@dev3 tmux-monitor-logging]$ tmux rename-window -t '@3' backup-window
+[jdefamio@dev3 tmux-monitor-logging]$ tmux rename-window -t '@3' primary-window
+[jdefamio@dev3 tmux-monitor-logging]$ tmux rename-window  secondary-window
+[jdefamio@dev3 tmux-monitor-logging]$ dir
+data.json  index.js  lib  node_modules  package-lock.json  package.json  tmux  tmux-reference
+[jdefamio@dev3 tmux-monitor-logging]$ tmux rename-window test-window
+[jdefamio@dev3 tmux-monitor-logging]$ tmux rename-window boolean-window
+[jdefamio@dev3 tmux-monitor-logging]$ node
+> let arr = [1,2,3,4,5]
+[90mundefined[39m
+> arr = ['a','b','c','d','e','f','g']
+[ [32m'a'[39m, [32m'b'[39m, [32m'c'[39m, [32m'd'[39m, [32m'e'[39m, [32m'f'[39m, [32m'g'[39m ]
+> arr
+[ [32m'a'[39m, [32m'b'[39m, [32m'c'[39m, [32m'd'[39m, [32m'e'[39m, [32m'f'[39m, [32m'g'[39m ]
+> arr = [1,2,3,4,5]
+[ [33m1[39m, [33m2[39m, [33m3[39m, [33m4[39m, [33m5[39m ]
+> arr
+[ [33m1[39m, [33m2[39m, [33m3[39m, [33m4[39m, [33m5[39m ]
+> exit
+Thrown:
+ReferenceError: exit is not defined
+> .exit
+[jdefamio@dev3 tmux-monitor-logging]$ clear
+[jdefamio@dev3 tmux-monitor-logging]$ dir
+data.json  index.js  lib  node_modules  package-lock.json  package.json  tmux  tmux-reference
+[jdefamio@dev3 tmux-monitor-logging]$ cd ..
+[jdefamio@dev3 tmux]$ cd ..
+[jdefamio@dev3 workspace]$ cd tmux-display
+[jdefamio@dev3 tmux-display]$ cd tmux-vue-app
+[jdefamio@dev3 tmux-vue-app]$ cd tmux-monitor
+[jdefamio@dev3 tmux-monitor]$ npm run build
+
+> tmux-monitor@0.1.0 build /home/jdefamio/workspace/tmux-display/tmux-vue-app/tmux-monitor
+> vue-cli-service build
+
+
+[36m⠋[39m  Building for production...
+
+[30;43m WARNING [39;49m [33mCompiled with 4 warnings[39m                                                                                                                                                                [90m6:53:38 PM[39m
+
+[30;43m warning [39;49m in ./src/store.js
+
+Module Warning (from ./node_modules/thread-loader/dist/cjs.js):
+
+/home/jdefamio/workspace/tmux-display/tmux-vue-app/tmux-monitor/src/store.js
+   61:7   error  Unexpected console statement          no-console
+   68:11  error  Unexpected console statement          no-console
+   74:11  error  Unexpected console statement          no-console
+   90:11  error  Unexpected console statement          no-console
+  167:32  error  'dispatch' is defined but never used  no-unused-vars
+
+✖ 5 problems (5 errors, 0 warnings)
+
+
+ @ ./src/main.js 7:0-28 14:9-14
+ @ multi ./src/main.js
+
+[30;43m warning [39;49m
+
+asset size limit: The following asset(s) exceed the recommended size limit (244 KiB).
+This can impact web performance.
+Assets:
+  js/chunk-vendors.518d8571.js (346 KiB)
+
+[30;43m warning [39;49m
+
+entrypoint size limit: The following entrypoint(s) combined asset size exceeds the recommended limit (244 KiB). This can impact web performance.
+Entrypoints:
+  app (358 KiB)
+      js/chunk-vendors.518d8571.js
+      css/app.5935b568.css
+      js/app.5269849f.js
+
+
+[30;43m warning [39;49m
+
+webpack performance recommendations:
+You can limit the size of your bundles by using import() or require.ensure to lazy load some parts of your application.
+For more info visit https://webpack.js.org/guides/code-splitting/
+
+  [1;36mFile[0;39m                                 [1;36mSize[0;39m               [1;36mGzipped[0;39m
+
+  [32mdist/js/chunk-vendors.518d8571.js[39m    345.98 KiB         112.02 KiB
+  [32mdist/js/app.5269849f.js[39m              10.11 KiB          3.01 KiB
+  [34mdist/css/app.5935b568.css[39m            1.79 KiB           0.70 KiB
+
+  [90mImages and other types of assets omitted.[39m
+
+[30;42m DONE [39;49m Build complete. The [36mdist[39m directory is ready to be deployed.
+[30;44m INFO [39;49m Check out deployment instructions at [36mhttps://cli.vuejs.org/guide/deployment.html[39m
+
+[jdefamio@dev3 tmux-monitor]$ npm run build
+
+> tmux-monitor@0.1.0 build /home/jdefamio/workspace/tmux-display/tmux-vue-app/tmux-monitor
+> vue-cli-service build
+
+
+[36m⠏[39m  Building for production...
+
+[30;43m WARNING [39;49m [33mCompiled with 4 warnings[39m                                                                                                                                                                                                                                              [90m2:17:00 PM
+[39m
+Module Warning (from ./node_modules/eslint-loader/index.js):
+[31merror[39m: [1m'server' is defined but never used[0m [2m(no-unused-vars)[0m at [32msrc/components/tmux.vue:30:8[39m:
+  28 | <script>
+  29 | import { mapState, mapGetters } from "vuex";
+> 30 | import server from '@/components/server';
+     |        ^
+  31 |
+  32 | export default {
+  33 |   name: "tmux",
+
+
+[1;31m1 error found.[0;39m
+
+You may use special comments to disable some warnings.
+Use [33m// eslint-disable-next-line[39m to ignore the next line.
+Use [33m/* eslint-disable */[39m to ignore all warnings in a file.
+[30;43m warning [39;49m
+
+asset size limit: The following asset(s) exceed the recommended size limit (244 KiB).
+This can impact web performance.
+Assets:
+  js/chunk-vendors.518d8571.js (346 KiB)
+
+[30;43m warning [39;49m
+
+entrypoint size limit: The following entrypoint(s) combined asset size exceeds the recommended limit (244 KiB). This can impact web performance.
+Entrypoints:
+  app (361 KiB)
+      js/chunk-vendors.518d8571.js
+      css/app.4151d38a.css
+      js/app.0fced985.js
+
+
+[30;43m warning [39;49m
+
+webpack performance recommendations:
+You can limit the size of your bundles by using import() or require.ensure to lazy load some parts of your application.
+For more info visit https://webpack.js.org/guides/code-splitting/
+
+  [1;36mFile[0;39m                                 [1;36mSize[0;39m               [1;36mGzipped[0;39m
+
+  [32mdist/js/chunk-vendors.518d8571.js[39m    345.98 KiB         112.02 KiB
+  [32mdist/js/app.0fced985.js[39m              12.31 KiB          3.21 KiB
+  [34mdist/css/app.4151d38a.css[39m            2.45 KiB           0.79 KiB
+
+  [90mImages and other types of assets omitted.[39m
+
+[30;42m DONE [39;49m Build complete. The [36mdist[39m directory is ready to be deployed.
+[30;44m INFO [39;49m Check out deployment instructions at [36mhttps://cli.vuejs.org/guide/deployment.html[39m
+
+[jdefamio@dev3 tmux-monitor]$ npm run build
+
+> tmux-monitor@0.1.0 build /home/jdefamio/workspace/tmux-display/tmux-vue-app/tmux-monitor
+> vue-cli-service build
+
+
+[36m⠦[39m  Building for production...
+
+[30;43m WARNING [39;49m [33mCompiled with 3 warnings[39m                                                                                                                                                                                                                                              [90m2:19:37 PM
+[39m
+[30;43m warning [39;49m
+
+asset size limit: The following asset(s) exceed the recommended size limit (244 KiB).
+This can impact web performance.
+Assets:
+  js/chunk-vendors.518d8571.js (346 KiB)
+
+[30;43m warning [39;49m
+
+entrypoint size limit: The following entrypoint(s) combined asset size exceeds the recommended limit (244 KiB). This can impact web performance.
+Entrypoints:
+  app (361 KiB)
+      js/chunk-vendors.518d8571.js
+      css/app.ec8a0195.css
+      js/app.35004c22.js
+
+
+[30;43m warning [39;49m
+
+webpack performance recommendations:
+You can limit the size of your bundles by using import() or require.ensure to lazy load some parts of your application.
+For more info visit https://webpack.js.org/guides/code-splitting/
+
+  [1;36mFile[0;39m                                 [1;36mSize[0;39m               [1;36mGzipped[0;39m
+
+  [32mdist/js/chunk-vendors.518d8571.js[39m    345.98 KiB         112.02 KiB
+  [32mdist/js/app.35004c22.js[39m              12.33 KiB          3.22 KiB
+  [34mdist/css/app.ec8a0195.css[39m            2.45 KiB           0.79 KiB
+
+  [90mImages and other types of assets omitted.[39m
+
+[30;42m DONE [39;49m Build complete. The [36mdist[39m directory is ready to be deployed.
+[30;44m INFO [39;49m Check out deployment instructions at [36mhttps://cli.vuejs.org/guide/deployment.html[39m
+
+[jdefamio@dev3 tmux-monitor]$ npm run build
+
+> tmux-monitor@0.1.0 build /home/jdefamio/workspace/tmux-display/tmux-vue-app/tmux-monitor
+> vue-cli-service build
+
+
+[36m⠹[39m  Building for production...
+
+[30;43m WARNING [39;49m [33mCompiled with 3 warnings[39m                                                                                                                                                                                                                                              [90m2:22:39 PM
+[39m
+[30;43m warning [39;49m
+
+asset size limit: The following asset(s) exceed the recommended size limit (244 KiB).
+This can impact web performance.
+Assets:
+  js/chunk-vendors.518d8571.js (346 KiB)
+
+[30;43m warning [39;49m
+
+entrypoint size limit: The following entrypoint(s) combined asset size exceeds the recommended limit (244 KiB). This can impact web performance.
+Entrypoints:
+  app (361 KiB)
+      js/chunk-vendors.518d8571.js
+      css/app.536ab7b5.css
+      js/app.f5518760.js
+
+
+[30;43m warning [39;49m
+
+webpack performance recommendations:
+You can limit the size of your bundles by using import() or require.ensure to lazy load some parts of your application.
+For more info visit https://webpack.js.org/guides/code-splitting/
+
+  [1;36mFile[0;39m                                 [1;36mSize[0;39m               [1;36mGzipped[0;39m
+
+  [32mdist/js/chunk-vendors.518d8571.js[39m    345.98 KiB         112.02 KiB
+  [32mdist/js/app.f5518760.js[39m              12.39 KiB          3.23 KiB
+  [34mdist/css/app.536ab7b5.css[39m            2.45 KiB           0.79 KiB
+
+  [90mImages and other types of assets omitted.[39m
+
+[30;42m DONE [39;49m Build complete. The [36mdist[39m directory is ready to be deployed.
+[30;44m INFO [39;49m Check out deployment instructions at [36mhttps://cli.vuejs.org/guide/deployment.html[39m
+
+[jdefamio@dev3 tmux-monitor]$ npm run build
+
+> tmux-monitor@0.1.0 build /home/jdefamio/workspace/tmux-display/tmux-vue-app/tmux-monitor
+> vue-cli-service build
+
+
+[36m⠋[39m  Building for production...
+
+[30;43m WARNING [39;49m [33mCompiled with 3 warnings[39m                                                                                                                                                                                                                                              [90m2:24:57 PM
+[39m
+[30;43m warning [39;49m
+
+asset size limit: The following asset(s) exceed the recommended size limit (244 KiB).
+This can impact web performance.
+Assets:
+  js/chunk-vendors.518d8571.js (346 KiB)
+
+[30;43m warning [39;49m
+
+entrypoint size limit: The following entrypoint(s) combined asset size exceeds the recommended limit (244 KiB). This can impact web performance.
+Entrypoints:
+  app (361 KiB)
+      js/chunk-vendors.518d8571.js
+      css/app.544d9ae9.css
+      js/app.42f8fc3a.js
+
+
+[30;43m warning [39;49m
+
+webpack performance recommendations:
+You can limit the size of your bundles by using import() or require.ensure to lazy load some parts of your application.
+For more info visit https://webpack.js.org/guides/code-splitting/
+
+  [1;36mFile[0;39m                                 [1;36mSize[0;39m               [1;36mGzipped[0;39m
+
+  [32mdist/js/chunk-vendors.518d8571.js[39m    345.98 KiB         112.02 KiB
+  [32mdist/js/app.42f8fc3a.js[39m              12.39 KiB          3.23 KiB
+  [34mdist/css/app.544d9ae9.css[39m            2.48 KiB           0.80 KiB
+
+  [90mImages and other types of assets omitted.[39m
+
+[30;42m DONE [39;49m Build complete. The [36mdist[39m directory is ready to be deployed.
+[30;44m INFO [39;49m Check out deployment instructions at [36mhttps://cli.vuejs.org/guide/deployment.html[39m
+
+[jdefamio@dev3 tmux-monitor]$ npm run build
+
+> tmux-monitor@0.1.0 build /home/jdefamio/workspace/tmux-display/tmux-vue-app/tmux-monitor
+> vue-cli-service build
+
+
+[36m⠋[39m  Building for production...
+
+[30;43m WARNING [39;49m [33mCompiled with 3 warnings[39m                                                                                                                                                                                                                                              [90m2:27:54 PM
+[39m
+[30;43m warning [39;49m
+
+asset size limit: The following asset(s) exceed the recommended size limit (244 KiB).
+This can impact web performance.
+Assets:
+  js/chunk-vendors.518d8571.js (346 KiB)
+
+[30;43m warning [39;49m
+
+entrypoint size limit: The following entrypoint(s) combined asset size exceeds the recommended limit (244 KiB). This can impact web performance.
+Entrypoints:
+  app (361 KiB)
+      js/chunk-vendors.518d8571.js
+      css/app.97365ac1.css
+      js/app.0fd02b88.js
+
+
+[30;43m warning [39;49m
+
+webpack performance recommendations:
+You can limit the size of your bundles by using import() or require.ensure to lazy load some parts of your application.
+For more info visit https://webpack.js.org/guides/code-splitting/
+
+  [1;36mFile[0;39m                                 [1;36mSize[0;39m               [1;36mGzipped[0;39m
+
+  [32mdist/js/chunk-vendors.518d8571.js[39m    345.98 KiB         112.02 KiB
+  [32mdist/js/app.0fd02b88.js[39m              12.39 KiB          3.23 KiB
+  [34mdist/css/app.97365ac1.css[39m            2.50 KiB           0.80 KiB
+
+  [90mImages and other types of assets omitted.[39m
+
+[30;42m DONE [39;49m Build complete. The [36mdist[39m directory is ready to be deployed.
+[30;44m INFO [39;49m Check out deployment instructions at [36mhttps://cli.vuejs.org/guide/deployment.html[39m
+
+[jdefamio@dev3 tmux-monitor]$ npm run build
+
+> tmux-monitor@0.1.0 build /home/jdefamio/workspace/tmux-display/tmux-vue-app/tmux-monitor
+> vue-cli-service build
+
+
+[36m⠋[39m  Building for production...
+
+[30;43m WARNING [39;49m [33mCompiled with 3 warnings[39m                                                                                                                                                                                                                                              [90m2:30:11 PM
+[39m
+[30;43m warning [39;49m
+
+asset size limit: The following asset(s) exceed the recommended size limit (244 KiB).
+This can impact web performance.
+Assets:
+  js/chunk-vendors.518d8571.js (346 KiB)
+
+[30;43m warning [39;49m
+
+entrypoint size limit: The following entrypoint(s) combined asset size exceeds the recommended limit (244 KiB). This can impact web performance.
+Entrypoints:
+  app (361 KiB)
+      js/chunk-vendors.518d8571.js
+      css/app.110dc729.css
+      js/app.867cd723.js
+
+
+[30;43m warning [39;49m
+
+webpack performance recommendations:
+You can limit the size of your bundles by using import() or require.ensure to lazy load some parts of your application.
+For more info visit https://webpack.js.org/guides/code-splitting/
+
+  [1;36mFile[0;39m                                 [1;36mSize[0;39m               [1;36mGzipped[0;39m
+
+  [32mdist/js/chunk-vendors.518d8571.js[39m    345.98 KiB         112.02 KiB
+  [32mdist/js/app.867cd723.js[39m              12.39 KiB          3.23 KiB
+  [34mdist/css/app.110dc729.css[39m            2.47 KiB           0.80 KiB
+
+  [90mImages and other types of assets omitted.[39m
+
+[30;42m DONE [39;49m Build complete. The [36mdist[39m directory is ready to be deployed.
+[30;44m INFO [39;49m Check out deployment instructions at [36mhttps://cli.vuejs.org/guide/deployment.html[39m
+
+[jdefamio@dev3 tmux-monitor]$ npm run build
+
+> tmux-monitor@0.1.0 build /home/jdefamio/workspace/tmux-display/tmux-vue-app/tmux-monitor
+> vue-cli-service build
+
+
+[36m⠴[39m  Building for production...
+
+[30;43m WARNING [39;49m [33mCompiled with 3 warnings[39m                                                                                                                                                                                                                                              [90m2:32:31 PM
+[39m
+[30;43m warning [39;49m
+
+asset size limit: The following asset(s) exceed the recommended size limit (244 KiB).
+This can impact web performance.
+Assets:
+  js/chunk-vendors.518d8571.js (346 KiB)
+
+[30;43m warning [39;49m
+
+entrypoint size limit: The following entrypoint(s) combined asset size exceeds the recommended limit (244 KiB). This can impact web performance.
+Entrypoints:
+  app (361 KiB)
+      js/chunk-vendors.518d8571.js
+      css/app.984618d0.css
+      js/app.44223b20.js
+
+
+[30;43m warning [39;49m
+
+webpack performance recommendations:
+You can limit the size of your bundles by using import() or require.ensure to lazy load some parts of your application.
+For more info visit https://webpack.js.org/guides/code-splitting/
+
+  [1;36mFile[0;39m                                 [1;36mSize[0;39m               [1;36mGzipped[0;39m
+
+  [32mdist/js/chunk-vendors.518d8571.js[39m    345.98 KiB         112.02 KiB
+  [32mdist/js/app.44223b20.js[39m              12.39 KiB          3.23 KiB
+  [34mdist/css/app.984618d0.css[39m            2.47 KiB           0.80 KiB
+
+  [90mImages and other types of assets omitted.[39m
+
+[30;42m DONE [39;49m Build complete. The [36mdist[39m directory is ready to be deployed.
+[30;44m INFO [39;49m Check out deployment instructions at [36mhttps://cli.vuejs.org/guide/deployment.html[39m
+
+[jdefamio@dev3 tmux-monitor]$ npm run build
+
+> tmux-monitor@0.1.0 build /home/jdefamio/workspace/tmux-display/tmux-vue-app/tmux-monitor
+> vue-cli-service build
+
+
+[36m⠼[39m  Building for production...
+
+[30;43m WARNING [39;49m [33mCompiled with 3 warnings[39m                                                                                                                                                                                                                                              [90m2:56:38 PM
+[39m
+[30;43m warning [39;49m
+
+asset size limit: The following asset(s) exceed the recommended size limit (244 KiB).
+This can impact web performance.
+Assets:
+  js/chunk-vendors.518d8571.js (346 KiB)
+
+[30;43m warning [39;49m
+
+entrypoint size limit: The following entrypoint(s) combined asset size exceeds the recommended limit (244 KiB). This can impact web performance.
+Entrypoints:
+  app (361 KiB)
+      js/chunk-vendors.518d8571.js
+      css/app.984618d0.css
+      js/app.aee07c06.js
+
+
+[30;43m warning [39;49m
+
+webpack performance recommendations:
+You can limit the size of your bundles by using import() or require.ensure to lazy load some parts of your application.
+For more info visit https://webpack.js.org/guides/code-splitting/
+
+  [1;36mFile[0;39m                                 [1;36mSize[0;39m               [1;36mGzipped[0;39m
+
+  [32mdist/js/chunk-vendors.518d8571.js[39m    345.98 KiB         112.02 KiB
+  [32mdist/js/app.aee07c06.js[39m              12.39 KiB          3.23 KiB
+  [34mdist/css/app.984618d0.css[39m            2.47 KiB           0.80 KiB
+
+  [90mImages and other types of assets omitted.[39m
+
+[30;42m DONE [39;49m Build complete. The [36mdist[39m directory is ready to be deployed.
+[30;44m INFO [39;49m Check out deployment instructions at [36mhttps://cli.vuejs.org/guide/deployment.html[39m
+
+[jdefamio@dev3 tmux-monitor]$ npm run build
+
+> tmux-monitor@0.1.0 build /home/jdefamio/workspace/tmux-display/tmux-vue-app/tmux-monitor
+> vue-cli-service build
+
+
+[36m⠸[39m  Building for production...
+
+[30;43m WARNING [39;49m [33mCompiled with 3 warnings[39m                                                                                                                                                                                                                                              [90m4:39:54 PM
+[39m
+[30;43m warning [39;49m
+
+asset size limit: The following asset(s) exceed the recommended size limit (244 KiB).
+This can impact web performance.
+Assets:
+  js/chunk-vendors.518d8571.js (346 KiB)
+
+[30;43m warning [39;49m
+
+entrypoint size limit: The following entrypoint(s) combined asset size exceeds the recommended limit (244 KiB). This can impact web performance.
+Entrypoints:
+  app (361 KiB)
+      js/chunk-vendors.518d8571.js
+      css/app.e9f8f81c.css
+      js/app.2f266f22.js
+
+
+[30;43m warning [39;49m
+
+webpack performance recommendations:
+You can limit the size of your bundles by using import() or require.ensure to lazy load some parts of your application.
+For more info visit https://webpack.js.org/guides/code-splitting/
+
+  [1;36mFile[0;39m                                 [1;36mSize[0;39m               [1;36mGzipped[0;39m
+
+  [32mdist/js/chunk-vendors.518d8571.js[39m    345.98 KiB         112.02 KiB
+  [32mdist/js/app.2f266f22.js[39m              12.39 KiB          3.23 KiB
+  [34mdist/css/app.e9f8f81c.css[39m            2.47 KiB           0.80 KiB
+
+  [90mImages and other types of assets omitted.[39m
+
+[30;42m DONE [39;49m Build complete. The [36mdist[39m directory is ready to be deployed.
+[30;44m INFO [39;49m Check out deployment instructions at [36mhttps://cli.vuejs.org/guide/deployment.html[39m
+
+[jdefamio@dev3 tmux-monitor]$ npm run build
+
+> tmux-monitor@0.1.0 build /home/jdefamio/workspace/tmux-display/tmux-vue-app/tmux-monitor
+> vue-cli-service build
+
+
+[36m⠴[39m  Building for production...
+
+[30;43m WARNING [39;49m [33mCompiled with 3 warnings[39m                                                                                                                                                                                                                                              [90m4:42:08 PM
+[39m
+[30;43m warning [39;49m
+
+asset size limit: The following asset(s) exceed the recommended size limit (244 KiB).
+This can impact web performance.
+Assets:
+  js/chunk-vendors.518d8571.js (346 KiB)
+
+[30;43m warning [39;49m
+
+entrypoint size limit: The following entrypoint(s) combined asset size exceeds the recommended limit (244 KiB). This can impact web performance.
+Entrypoints:
+  app (361 KiB)
+      js/chunk-vendors.518d8571.js
+      css/app.4bd7fbf4.css
+      js/app.0a9fa22e.js
+
+
+[30;43m warning [39;49m
+
+webpack performance recommendations:
+You can limit the size of your bundles by using import() or require.ensure to lazy load some parts of your application.
+For more info visit https://webpack.js.org/guides/code-splitting/
+
+  [1;36mFile[0;39m                                 [1;36mSize[0;39m               [1;36mGzipped[0;39m
+
+  [32mdist/js/chunk-vendors.518d8571.js[39m    345.98 KiB         112.02 KiB
+  [32mdist/js/app.0a9fa22e.js[39m              12.39 KiB          3.22 KiB
+  [34mdist/css/app.4bd7fbf4.css[39m            2.49 KiB           0.80 KiB
+
+  [90mImages and other types of assets omitted.[39m
+
+[30;42m DONE [39;49m Build complete. The [36mdist[39m directory is ready to be deployed.
+[30;44m INFO [39;49m Check out deployment instructions at [36mhttps://cli.vuejs.org/guide/deployment.html[39m
+
+[jdefamio@dev3 tmux-monitor]$ npm run build
+
+> tmux-monitor@0.1.0 build /home/jdefamio/workspace/tmux-display/tmux-vue-app/tmux-monitor
+> vue-cli-service build
+
+
+[36m⠦[39m  Building for production...
+
+[30;43m WARNING [39;49m [33mCompiled with 3 warnings[39m                                                                                                                                                                                                                                              [90m4:45:08 PM
+[39m
+[30;43m warning [39;49m
+
+asset size limit: The following asset(s) exceed the recommended size limit (244 KiB).
+This can impact web performance.
+Assets:
+  js/chunk-vendors.518d8571.js (346 KiB)
+
+[30;43m warning [39;49m
+
+entrypoint size limit: The following entrypoint(s) combined asset size exceeds the recommended limit (244 KiB). This can impact web performance.
+Entrypoints:
+  app (361 KiB)
+      js/chunk-vendors.518d8571.js
+      css/app.a1889e6f.css
+      js/app.ac3bdb4c.js
+
+
+[30;43m warning [39;49m
+
+webpack performance recommendations:
+You can limit the size of your bundles by using import() or require.ensure to lazy load some parts of your application.
+For more info visit https://webpack.js.org/guides/code-splitting/
+
+  [1;36mFile[0;39m                                 [1;36mSize[0;39m               [1;36mGzipped[0;39m
+
+  [32mdist/js/chunk-vendors.518d8571.js[39m    345.98 KiB         112.02 KiB
+  [32mdist/js/app.ac3bdb4c.js[39m              12.39 KiB          3.23 KiB
+  [34mdist/css/app.a1889e6f.css[39m            2.70 KiB           0.84 KiB
+
+  [90mImages and other types of assets omitted.[39m
+
+[30;42m DONE [39;49m Build complete. The [36mdist[39m directory is ready to be deployed.
+[30;44m INFO [39;49m Check out deployment instructions at [36mhttps://cli.vuejs.org/guide/deployment.html[39m
+
+[jdefamio@dev3 tmux-monitor]$ npm run build
+
+> tmux-monitor@0.1.0 build /home/jdefamio/workspace/tmux-display/tmux-vue-app/tmux-monitor
+> vue-cli-service build
+
+
+[36m⠼[39m  Building for production...
+
+[30;43m WARNING [39;49m [33mCompiled with 3 warnings[39m                                                                                                                                                                                                                                              [90m4:56:17 PM
+[39m
+[30;43m warning [39;49m
+
+asset size limit: The following asset(s) exceed the recommended size limit (244 KiB).
+This can impact web performance.
+Assets:
+  js/chunk-vendors.518d8571.js (346 KiB)
+
+[30;43m warning [39;49m
+
+entrypoint size limit: The following entrypoint(s) combined asset size exceeds the recommended limit (244 KiB). This can impact web performance.
+Entrypoints:
+  app (362 KiB)
+      js/chunk-vendors.518d8571.js
+      css/app.497c8770.css
+      js/app.a3eec0f8.js
+
+
+[30;43m warning [39;49m
+
+webpack performance recommendations:
+You can limit the size of your bundles by using import() or require.ensure to lazy load some parts of your application.
+For more info visit https://webpack.js.org/guides/code-splitting/
+
+  [1;36mFile[0;39m                                 [1;36mSize[0;39m               [1;36mGzipped[0;39m
+
+  [32mdist/js/chunk-vendors.518d8571.js[39m    345.98 KiB         112.02 KiB
+  [32mdist/js/app.a3eec0f8.js[39m              12.39 KiB          3.23 KiB
+  [34mdist/css/app.497c8770.css[39m            3.77 KiB           0.97 KiB
+
+  [90mImages and other types of assets omitted.[39m
+
+[30;42m DONE [39;49m Build complete. The [36mdist[39m directory is ready to be deployed.
+[30;44m INFO [39;49m Check out deployment instructions at [36mhttps://cli.vuejs.org/guide/deployment.html[39m
+
+[jdefamio@dev3 tmux-monitor]$ npm run build
+
+> tmux-monitor@0.1.0 build /home/jdefamio/workspace/tmux-display/tmux-vue-app/tmux-monitor
+> vue-cli-service build
+
+
+[36m⠴[39m  Building for production...
+
+[30;43m WARNING [39;49m [33mCompiled with 3 warnings[39m                                                                                                                                                                                                                                              [90m4:57:59 PM
+[39m
+[30;43m warning [39;49m
+
+asset size limit: The following asset(s) exceed the recommended size limit (244 KiB).
+This can impact web performance.
+Assets:
+  js/chunk-vendors.518d8571.js (346 KiB)
+
+[30;43m warning [39;49m
+
+entrypoint size limit: The following entrypoint(s) combined asset size exceeds the recommended limit (244 KiB). This can impact web performance.
+Entrypoints:
+  app (362 KiB)
+      js/chunk-vendors.518d8571.js
+      css/app.77912c6d.css
+      js/app.a804e475.js
+
+
+[30;43m warning [39;49m
+
+webpack performance recommendations:
+You can limit the size of your bundles by using import() or require.ensure to lazy load some parts of your application.
+For more info visit https://webpack.js.org/guides/code-splitting/
+
+  [1;36mFile[0;39m                                 [1;36mSize[0;39m               [1;36mGzipped[0;39m
+
+  [32mdist/js/chunk-vendors.518d8571.js[39m    345.98 KiB         112.02 KiB
+  [32mdist/js/app.a804e475.js[39m              12.39 KiB          3.23 KiB
+  [34mdist/css/app.77912c6d.css[39m            3.78 KiB           0.97 KiB
+
+  [90mImages and other types of assets omitted.[39m
+
+[30;42m DONE [39;49m Build complete. The [36mdist[39m directory is ready to be deployed.
+[30;44m INFO [39;49m Check out deployment instructions at [36mhttps://cli.vuejs.org/guide/deployment.html[39m
+
+[jdefamio@dev3 tmux-monitor]$ npm run build
+
+> tmux-monitor@0.1.0 build /home/jdefamio/workspace/tmux-display/tmux-vue-app/tmux-monitor
+> vue-cli-service build
+
+
+[36m⠼[39m  Building for production...
+
+[30;43m WARNING [39;49m [33mCompiled with 3 warnings[39m                                                                                                                                                                                                                                              [90m5:00:21 PM
+[39m
+[30;43m warning [39;49m
+
+asset size limit: The following asset(s) exceed the recommended size limit (244 KiB).
+This can impact web performance.
+Assets:
+  js/chunk-vendors.518d8571.js (346 KiB)
+
+[30;43m warning [39;49m
+
+entrypoint size limit: The following entrypoint(s) combined asset size exceeds the recommended limit (244 KiB). This can impact web performance.
+Entrypoints:
+  app (362 KiB)
+      js/chunk-vendors.518d8571.js
+      css/app.41b0385a.css
+      js/app.9b210419.js
+
+
+[30;43m warning [39;49m
+
+webpack performance recommendations:
+You can limit the size of your bundles by using import() or require.ensure to lazy load some parts of your application.
+For more info visit https://webpack.js.org/guides/code-splitting/
+
+  [1;36mFile[0;39m                                 [1;36mSize[0;39m               [1;36mGzipped[0;39m
+
+  [32mdist/js/chunk-vendors.518d8571.js[39m    345.98 KiB         112.02 KiB
+  [32mdist/js/app.9b210419.js[39m              12.39 KiB          3.23 KiB
+  [34mdist/css/app.41b0385a.css[39m            3.70 KiB           0.94 KiB
+
+  [90mImages and other types of assets omitted.[39m
+
+[30;42m DONE [39;49m Build complete. The [36mdist[39m directory is ready to be deployed.
+[30;44m INFO [39;49m Check out deployment instructions at [36mhttps://cli.vuejs.org/guide/deployment.html[39m
+
+[jdefamio@dev3 tmux-monitor]$ npm run build
+
+> tmux-monitor@0.1.0 build /home/jdefamio/workspace/tmux-display/tmux-vue-app/tmux-monitor
+> vue-cli-service build
+
+
+[36m⠼[39m  Building for production...
+
+[30;43m WARNING [39;49m [33mCompiled with 3 warnings[39m                                                                                                                                                                                                                                              [90m5:06:21 PM
+[39m
+[30;43m warning [39;49m
+
+asset size limit: The following asset(s) exceed the recommended size limit (244 KiB).
+This can impact web performance.
+Assets:
+  js/chunk-vendors.518d8571.js (346 KiB)
+
+[30;43m warning [39;49m
+
+entrypoint size limit: The following entrypoint(s) combined asset size exceeds the recommended limit (244 KiB). This can impact web performance.
+Entrypoints:
+  app (362 KiB)
+      js/chunk-vendors.518d8571.js
+      css/app.877edfe2.css
+      js/app.40801598.js
+
+
+[30;43m warning [39;49m
+
+webpack performance recommendations:
+You can limit the size of your bundles by using import() or require.ensure to lazy load some parts of your application.
+For more info visit https://webpack.js.org/guides/code-splitting/
+
+  [1;36mFile[0;39m                                 [1;36mSize[0;39m               [1;36mGzipped[0;39m
+
+  [32mdist/js/chunk-vendors.518d8571.js[39m    345.98 KiB         112.02 KiB
+  [32mdist/js/app.40801598.js[39m              12.39 KiB          3.23 KiB
+  [34mdist/css/app.877edfe2.css[39m            3.70 KiB           0.94 KiB
+
+  [90mImages and other types of assets omitted.[39m
+
+[30;42m DONE [39;49m Build complete. The [36mdist[39m directory is ready to be deployed.
+[30;44m INFO [39;49m Check out deployment instructions at [36mhttps://cli.vuejs.org/guide/deployment.html[39m
+
+[jdefamio@dev3 tmux-monitor]$ node
+> let arr = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16]
+[90mundefined[39m
+> let s = arr.map(a => { return a.toString(); });
+[90mundefined[39m
+> s
+[ [32m'1'[39m,
+  [32m'2'[39m,
+  [32m'3'[39m,
+  [32m'4'[39m,
+  [32m'5'[39m,
+  [32m'6'[39m,
+  [32m'7'[39m,
+  [32m'8'[39m,
+  [32m'9'[39m,
+  [32m'10'[39m,
+  [32m'11'[39m,
+  [32m'12'[39m,
+  [32m'13'[39m,
+  [32m'14'[39m,
+  [32m'15'[39m,
+  [32m'16'[39m ]
+> s[11] += " " + s.splice(12, 1)
+[32m'12 13'[39m
+> s
+[ [32m'1'[39m,
+  [32m'2'[39m,
+  [32m'3'[39m,
+  [32m'4'[39m,
+  [32m'5'[39m,
+  [32m'6'[39m,
+  [32m'7'[39m,
+  [32m'8'[39m,
+  [32m'9'[39m,
+  [32m'10'[39m,
+  [32m'11'[39m,
+  [32m'12 13'[39m,
+  [32m'14'[39m,
+  [32m'15'[39m,
+  [32m'16'[39m ]
+> s[11] = 12
+[33m12[39m
+> s[12]= 13
+[33m13[39m
+> s[13] = 14
+[33m14[39m
+> s[14] = 15
+[33m15[39m
+> s
+[ [32m'1'[39m, [32m'2'[39m, [32m'3'[39m, [32m'4'[39m, [32m'5'[39m, [32m'6'[39m, [32m'7'[39m, [32m'8'[39m, [32m'9'[39m, [32m'10'[39m, [32m'11'[39m, [33m12[39m, [33m13[39m, [33m14[39m, [33m15[39m ]
+> a
+Thrown:
+ReferenceError: a is not defined
+> arr
+[ [33m1[39m, [33m2[39m, [33m3[39m, [33m4[39m, [33m5[39m, [33m6[39m, [33m7[39m, [33m8[39m, [33m9[39m, [33m10[39m, [33m11[39m, [33m12[39m, [33m13[39m, [33m14[39m, [33m15[39m, [33m16[39m ]
+> s = arr.map(a => { return a.toString(); } );
+[ [32m'1'[39m,
+  [32m'2'[39m,
+  [32m'3'[39m,
+  [32m'4'[39m,
+  [32m'5'[39m,
+  [32m'6'[39m,
+  [32m'7'[39m,
+  [32m'8'[39m,
+  [32m'9'[39m,
+  [32m'10'[39m,
+  [32m'11'[39m,
+  [32m'12'[39m,
+  [32m'13'[39m,
+  [32m'14'[39m,
+  [32m'15'[39m,
+  [32m'16'[39m ]
+> while (s.length > 12) s[11] += " " + s.splice(12, 1)
+[32m'12 13 14 15 16'[39m
+> s
+[ [32m'1'[39m,
+  [32m'2'[39m,
+  [32m'3'[39m,
+  [32m'4'[39m,
+  [32m'5'[39m,
+  [32m'6'[39m,
+  [32m'7'[39m,
+  [32m'8'[39m,
+  [32m'9'[39m,
+  [32m'10'[39m,
+  [32m'11'[39m,
+  [32m'12 13 14 15 16'[39m ]
+> .exit
+[jdefamio@dev3 tmux-monitor]$ clear
+[jdefamio@dev3 tmux-monitor]$ npm run build
+
+> tmux-monitor@0.1.0 build /home/jdefamio/workspace/tmux-display/tmux-vue-app/tmux-monitor
+> vue-cli-service build
+
+
+[36m⠦[39m  Building for production...
+
+[30;43m WARNING [39;49m [33mCompiled with 3 warnings[39m                                                                                                                                                                                                                                              [90m5:15:54 PM
+[39m
+[30;43m warning [39;49m
+
+asset size limit: The following asset(s) exceed the recommended size limit (244 KiB).
+This can impact web performance.
+Assets:
+  js/chunk-vendors.518d8571.js (346 KiB)
+
+[30;43m warning [39;49m
+
+entrypoint size limit: The following entrypoint(s) combined asset size exceeds the recommended limit (244 KiB). This can impact web performance.
+Entrypoints:
+  app (362 KiB)
+      js/chunk-vendors.518d8571.js
+      css/app.4d05c669.css
+      js/app.8eda5c23.js
+
+
+[30;43m warning [39;49m
+
+webpack performance recommendations:
+You can limit the size of your bundles by using import() or require.ensure to lazy load some parts of your application.
+For more info visit https://webpack.js.org/guides/code-splitting/
+
+  [1;36mFile[0;39m                                 [1;36mSize[0;39m               [1;36mGzipped[0;39m
+
+  [32mdist/js/chunk-vendors.518d8571.js[39m    345.98 KiB         112.02 KiB
+  [32mdist/js/app.8eda5c23.js[39m              12.39 KiB          3.23 KiB
+  [34mdist/css/app.4d05c669.css[39m            3.78 KiB           0.96 KiB
+
+  [90mImages and other types of assets omitted.[39m
+
+[30;42m DONE [39;49m Build complete. The [36mdist[39m directory is ready to be deployed.
+[30;44m INFO [39;49m Check out deployment instructions at [36mhttps://cli.vuejs.org/guide/deployment.html[39m
+
+[jdefamio@dev3 tmux-monitor]$ tmux renamew -t 0 tmux-logging-monitor
+[jdefamio@dev3 tmux-monitor]$ tmux renamew -t 0 tmux-logging
+[jdefamio@dev3 tmux-monitor]$ tmux renamew -t 1 vue-app-control
+[jdefamio@dev3 tmux-monitor]$ tmux renamew -t 0 tmux-logging-window
+[jdefamio@dev3 tmux-monitor]$ tmux capturep -C -p
+  app (362 KiB)
+      js/chunk-vendors.518d8571.js
+      css/app.4d05c669.css
+      js/app.8eda5c23.js
+
+
+ warning
+
+webpack performance recommendations:
+You can limit the size of your bundles by using import() or require.ensure to lazy load some parts of your application.
+For more info visit https://webpack.js.org/guides/code-splitting/
+
+  File                                 Size               Gzipped
+
+  dist/js/chunk-vendors.518d8571.js    345.98 KiB         112.02 KiB
+  dist/js/app.8eda5c23.js              12.39 KiB          3.23 KiB
+  dist/css/app.4d05c669.css            3.78 KiB           0.96 KiB
+
+  Images and other types of assets omitted.
+
+ DONE  Build complete. The dist directory is ready to be deployed.
+ INFO  Check out deployment instructions at https://cli.vuejs.org/guide/deployment.html
+
+[jdefamio@dev3 tmux-monitor]$ tmux renamew -t 0 tmux-logging-monitor
+[jdefamio@dev3 tmux-monitor]$ tmux renamew -t 0 tmux-logging
+[jdefamio@dev3 tmux-monitor]$ tmux renamew -t 1 vue-app-control
+[jdefamio@dev3 tmux-monitor]$ tmux renamew -t 0 tmux-logging-window
+[jdefamio@dev3 tmux-monitor]$ tmux capturep -C -p
+
+[jdefamio@dev3 tmux-monitor]$ tmux capturep -pS -0 -C
+      css/app.4d05c669.css
+      js/app.8eda5c23.js
+
+
+ warning
+
+webpack performance recommendations:
+You can limit the size of your bundles by using import() or require.ensure to lazy load some parts of your application.
+For more info visit https://webpack.js.org/guides/code-splitting/
+
+  File                                 Size               Gzipped
+
+  dist/js/chunk-vendors.518d8571.js    345.98 KiB         112.02 KiB
+  dist/js/app.8eda5c23.js              12.39 KiB          3.23 KiB
+  dist/css/app.4d05c669.css            3.78 KiB           0.96 KiB
+
+  Images and other types of assets omitted.
+
+ DONE  Build complete. The dist directory is ready to be deployed.
+ INFO  Check out deployment instructions at https://cli.vuejs.org/guide/deployment.html
+
+[jdefamio@dev3 tmux-monitor]$ tmux renamew -t 0 tmux-logging-monitor
+[jdefamio@dev3 tmux-monitor]$ tmux renamew -t 0 tmux-logging
+[jdefamio@dev3 tmux-monitor]$ tmux renamew -t 1 vue-app-control
+[jdefamio@dev3 tmux-monitor]$ tmux renamew -t 0 tmux-logging-window
+[jdefamio@dev3 tmux-monitor]$ tmux capturep -C -p
+
+[jdefamio@dev3 tmux-monitor]$ tmux capturep -pS -0 -C
+
+[jdefamio@dev3 tmux-monitor]$ tmux capturep -pS 0
+
+
+ warning
+
+webpack performance recommendations:
+You can limit the size of your bundles by using import() or require.ensure to lazy load some parts of your application.
+For more info visit https://webpack.js.org/guides/code-splitting/
+
+  File                                 Size               Gzipped
+
+  dist/js/chunk-vendors.518d8571.js    345.98 KiB         112.02 KiB
+  dist/js/app.8eda5c23.js              12.39 KiB          3.23 KiB
+  dist/css/app.4d05c669.css            3.78 KiB           0.96 KiB
+
+  Images and other types of assets omitted.
+
+ DONE  Build complete. The dist directory is ready to be deployed.
+ INFO  Check out deployment instructions at https://cli.vuejs.org/guide/deployment.html
+
+[jdefamio@dev3 tmux-monitor]$ tmux renamew -t 0 tmux-logging-monitor
+[jdefamio@dev3 tmux-monitor]$ tmux renamew -t 0 tmux-logging
+[jdefamio@dev3 tmux-monitor]$ tmux renamew -t 1 vue-app-control
+[jdefamio@dev3 tmux-monitor]$ tmux renamew -t 0 tmux-logging-window
+[jdefamio@dev3 tmux-monitor]$ tmux capturep -C -p
+
+[jdefamio@dev3 tmux-monitor]$ tmux capturep -pS -0 -C
+
+[jdefamio@dev3 tmux-monitor]$ tmux capturep -pS 0
+
+[jdefamio@dev3 tmux-monitor]$ tmux capturep -pS 0 -C
+ warning
+
+webpack performance recommendations:
+You can limit the size of your bundles by using import() or require.ensure to lazy load some parts of your application.
+For more info visit https://webpack.js.org/guides/code-splitting/
+
+  File                                 Size               Gzipped
+
+  dist/js/chunk-vendors.518d8571.js    345.98 KiB         112.02 KiB
+  dist/js/app.8eda5c23.js              12.39 KiB          3.23 KiB
+  dist/css/app.4d05c669.css            3.78 KiB           0.96 KiB
+
+  Images and other types of assets omitted.
+
+ DONE  Build complete. The dist directory is ready to be deployed.
+ INFO  Check out deployment instructions at https://cli.vuejs.org/guide/deployment.html
+
+[jdefamio@dev3 tmux-monitor]$ tmux renamew -t 0 tmux-logging-monitor
+[jdefamio@dev3 tmux-monitor]$ tmux renamew -t 0 tmux-logging
+[jdefamio@dev3 tmux-monitor]$ tmux renamew -t 1 vue-app-control
+[jdefamio@dev3 tmux-monitor]$ tmux renamew -t 0 tmux-logging-window
+[jdefamio@dev3 tmux-monitor]$ tmux capturep -C -p
+
+[jdefamio@dev3 tmux-monitor]$ tmux capturep -pS -0 -C
+
+[jdefamio@dev3 tmux-monitor]$ tmux capturep -pS 0
+
+[jdefamio@dev3 tmux-monitor]$ tmux capturep -pS 0 -C
+
+[jdefamio@dev3 tmux-monitor]$ tmux capturep -p -e
+webpack performance recommendations:
+You can limit the size of your bundles by using import() or require.ensure to lazy load some parts of your application.
+For more info visit https://webpack.js.org/guides/code-splitting/
+
+  File                                 Size               Gzipped
+
+  dist/js/chunk-vendors.518d8571.js    345.98 KiB         112.02 KiB
+  dist/js/app.8eda5c23.js              12.39 KiB          3.23 KiB
+  dist/css/app.4d05c669.css            3.78 KiB           0.96 KiB
+
+  Images and other types of assets omitted.
+
+ DONE  Build complete. The dist directory is ready to be deployed.
+ INFO  Check out deployment instructions at https://cli.vuejs.org/guide/deployment.html
+
+[jdefamio@dev3 tmux-monitor]$ tmux renamew -t 0 tmux-logging-monitor
+[jdefamio@dev3 tmux-monitor]$ tmux renamew -t 0 tmux-logging
+[jdefamio@dev3 tmux-monitor]$ tmux renamew -t 1 vue-app-control
+[jdefamio@dev3 tmux-monitor]$ tmux renamew -t 0 tmux-logging-window
+[jdefamio@dev3 tmux-monitor]$ tmux capturep -C -p
+
+[jdefamio@dev3 tmux-monitor]$ tmux capturep -pS -0 -C
+
+[jdefamio@dev3 tmux-monitor]$ tmux capturep -pS 0
+
+[jdefamio@dev3 tmux-monitor]$ tmux capturep -pS 0 -C
+
+[jdefamio@dev3 tmux-monitor]$ tmux capturep -p -e
+
+[jdefamio@dev3 tmux-monitor]$ tmux capture-pane -t '%38' -p
+top - 17:34:26 up 589 days,  1:23,  2 users,  load average: 0.09, 0.23, 0.38
+Tasks: 1011 total,   1 running, 1010 sleeping,   0 stopped,   0 zombie
+%Cpu(s):  0.2 us,  0.7 sy,  0.0 ni, 99.1 id,  0.0 wa,  0.0 hi,  0.0 si,  0.0 st
+KiB Mem : 65302672 total,  5814940 free, 50859548 used,  8628184 buff/cache
+KiB Swap: 23384060 total,  7641752 free, 15742308 used. 12562484 avail Mem
+
+   PID USER      PR  NI    VIRT    RES    SHR S  %CPU %MEM     TIME+ COMMAND
+ 38115 mc        20   0 7449928 335372   2252 S   4.3  0.5   2608:51 java
+191056 jdefamio  20   0 1698076 355028   1088 S   2.0  0.5  90:11.90 tmux
+217372 root      20   0  956476  56112   4100 S   0.7  0.1 123:23.22 node /var/lib/d
+433727 jdefamio  20   0  158616   3144   1516 R   0.7  0.0   1:20.56 top
+    10 root      20   0       0      0      0 S   0.3  0.0 328:19.68 rcu_sched
+   798 root      20   0       0      0      0 S   0.3  0.0 190:49.20 xfsaild/dm-0
+  1228 dbus      20   0   98484   1104    688 S   0.3  0.0  18:12.28 dbus-daemon
+ 16531 root      20   0 2834760   2400    952 S   0.3  0.0 214:07.40 docker-containe
+216521 jdefamio  20   0  846664  52204  14392 S   0.3  0.1   0:12.46 node
+217532 root      20   0 1233124  27260   4844 S   0.3  0.0   6:30.80 node /var/lib/d
+[jdefamio@dev3 tmux-monitor]$ tmux capture-pane -t '%38' -p -e
+top - 17:34:29 up 589 days,  1:23,  2 users,  load average: 0.09, 0.23, 0.38
+Tasks:[1m 1011 [0mtotal,[1m   1 [0mrunning,[1m 1010 [0msleeping,[1m   0 [0mstopped,[1m   0 [0mzombie
+%Cpu(s):[1m  0.2 [0mus,[1m  0.6 [0msy,[1m  0.0 [0mni,[1m 99.2 [0mid,[1m  0.0 [0mwa,[1m  0.0 [0mhi,[1m  0.0 [0msi,[1m  0.0 [0mst
+KiB Mem :[1m 65302672 [0mtotal,[1m  5815048 [0mfree,[1m 50859436 [0mused,[1m  8628188 [0mbuff/cache
+KiB Swap:[1m 23384060 [0mtotal,[1m  7641752 [0mfree,[1m 15742308 [0mused.[1m 12562600 [0mavail Mem
+
+[7m   PID USER      PR  NI    VIRT    RES    SHR S  %CPU %MEM     TIME+ COMMAND[0m
+ 38115 mc        20   0 7449928 335372   2252 S   4.6  0.5   2608:51 java
+191056 jdefamio  20   0 1698076 355060   1088 S   1.7  0.5  90:11.95 tmux
+[1m433727 jdefamio  20   0  158616   3144   1516 R   0.7  0.0   1:20.58 top[0m
+445857 rnixdorf  20   0  426404  13468  10680 S   0.7  0.0   0:08.15 smbd
+    10 root      20   0       0      0      0 S   0.3  0.0 328:19.69 rcu_sched
+  9249 mysql     20   0 51.444g 0.036t   7832 S   0.3 60.0  11064:07 mysqld
+ 80449 root      20   0       0      0      0 S   0.3  0.0   0:03.23 kworker/0:1
+210551 phoroszo  20   0  632648  57324  13060 S   0.3  0.1   0:04.99 node
+216521 jdefamio  20   0  846664  51972  14392 S   0.3  0.1   0:12.47 node
+217372 root      20   0  956476  56368   4100 S   0.3  0.1 123:23.23 node /var/lib/d
+[jdefamio@dev3 tmux-monitor]$ tmux -v
+sessions should be nested with care, unset $TMUX to force
+[jdefamio@dev3 tmux-monitor]$ tmux -V
+tmux 1.8
+[jdefamio@dev3 tmux-monitor]$ update tmux
+-bash: update: command not found
+[jdefamio@dev3 tmux-monitor]$ sudo
+usage: sudo -h | -K | -k | -V
+usage: sudo -v [-AknS] [-g group] [-h host] [-p prompt] [-u user]
+usage: sudo -l [-AknS] [-g group] [-h host] [-p prompt] [-U user] [-u user] [command]
+usage: sudo [-AbEHknPS] [-r role] [-t type] [-C num] [-g group] [-h host] [-p prompt] [-u user] [VAR=value] [-i|-s] [<command>]
+usage: sudo -e [-AknS] [-r role] [-t type] [-C num] [-g group] [-h host] [-p prompt] [-u user] file ...
+[jdefamio@dev3 tmux-monitor]$ sudo -p
+sudo: option requires an argument -- 'p'
+usage: sudo -h | -K | -k | -V
+usage: sudo -v [-AknS] [-g group] [-h host] [-p prompt] [-u user]
+usage: sudo -l [-AknS] [-g group] [-h host] [-p prompt] [-U user] [-u user] [command]
+usage: sudo [-AbEHknPS] [-r role] [-t type] [-C num] [-g group] [-h host] [-p prompt] [-u user] [VAR=value] [-i|-s] [<command>]
+usage: sudo -e [-AknS] [-r role] [-t type] [-C num] [-g group] [-h host] [-p prompt] [-u user] file ...
+[jdefamio@dev3 tmux-monitor]$ sudo p
+sudo: p: command not found
+[jdefamio@dev3 tmux-monitor]$ sudo -P
+usage: sudo -h | -K | -k | -V
+usage: sudo -v [-AknS] [-g group] [-h host] [-p prompt] [-u user]
+usage: sudo -l [-AknS] [-g group] [-h host] [-p prompt] [-U user] [-u user] [command]
+usage: sudo [-AbEHknPS] [-r role] [-t type] [-C num] [-g group] [-h host] [-p prompt] [-u user] [VAR=value] [-i|-s] [<command>]
+usage: sudo -e [-AknS] [-r role] [-t type] [-C num] [-g group] [-h host] [-p prompt] [-u user] file ...
+[jdefamio@dev3 tmux-monitor]$ sudo
+usage: sudo -h | -K | -k | -V
+usage: sudo -v [-AknS] [-g group] [-h host] [-p prompt] [-u user]
+usage: sudo -l [-AknS] [-g group] [-h host] [-p prompt] [-U user] [-u user] [command]
+usage: sudo [-AbEHknPS] [-r role] [-t type] [-C num] [-g group] [-h host] [-p prompt] [-u user] [VAR=value] [-i|-s] [<command>]
+usage: sudo -e [-AknS] [-r role] [-t type] [-C num] [-g group] [-h host] [-p prompt] [-u user] file ...
+[jdefamio@dev3 tmux-monitor]$ tmux -V
+tmux 1.8
+[jdefamio@dev3 tmux-monitor]$ clear
+[jdefamio@dev3 tmux-monitor]$ node
+> let str = "teddy is a good dog"
+[90mundefined[39m
+> str.forEach(l => { console.log(l) });
+Thrown:
+TypeError: str.forEach is not a function
+> str.split("").forEach(l => { console.log(l) });
+t
+e
+d
+d
+y
+
+i
+s
+
+a
+
+g
+o
+o
+d
+
+d
+o
+g
+[90mundefined[39m
+> node
+Thrown:
+ReferenceError: node is not defined
+> str
+[32m'teddy is a good dog'[39m
+> let a = str.split("")
+[90mundefined[39m
+> a
+[ [32m't'[39m,
+  [32m'e'[39m,
+  [32m'd'[39m,
+  [32m'd'[39m,
+  [32m'y'[39m,
+  [32m' '[39m,
+  [32m'i'[39m,
+  [32m's'[39m,
+  [32m' '[39m,
+  [32m'a'[39m,
+  [32m' '[39m,
+  [32m'g'[39m,
+  [32m'o'[39m,
+  [32m'o'[39m,
+  [32m'd'[39m,
+  [32m' '[39m,
+  [32m'd'[39m,
+  [32m'o'[39m,
+  [32m'g'[39m ]
+> let f = 39
+[90mundefined[39m
+> f % 10
+[33m9[39m
+> f/10
+[33m3.9[39m
+> Math.floor(f/10)
+[33m3[39m
+> .exit
+[jdefamio@dev3 tmux-monitor]$ clear
+[jdefamio@dev3 tmux-monitor]$ npm run build
+
+> tmux-monitor@0.1.0 build /home/jdefamio/workspace/tmux-display/tmux-vue-app/tmux-monitor
+> vue-cli-service build
+
+
+[36m⠼[39m  Building for production...
+
+[30;43m WARNING [39;49m [33mCompiled with 4 warnings[39m                                                                                                                                                                                                                                              [90m4:40:19 PM
+[39m
+[30;43m warning [39;49m in ./src/store.js
+
+Module Warning (from ./node_modules/thread-loader/dist/cjs.js):
+
+/home/jdefamio/workspace/tmux-display/tmux-vue-app/tmux-monitor/src/store.js
+   74:11  error  Unexpected console statement          no-console
+   90:11  error  Unexpected console statement          no-console
+  167:32  error  'dispatch' is defined but never used  no-unused-vars
+
+✖ 3 problems (3 errors, 0 warnings)
+
+
+ @ ./src/main.js 7:0-28 14:9-14
+ @ multi ./src/main.js
+
+[30;43m warning [39;49m
+
+asset size limit: The following asset(s) exceed the recommended size limit (244 KiB).
+This can impact web performance.
+Assets:
+  js/chunk-vendors.518d8571.js (346 KiB)
+
+[30;43m warning [39;49m
+
+entrypoint size limit: The following entrypoint(s) combined asset size exceeds the recommended limit (244 KiB). This can impact web performance.
+Entrypoints:
+  app (362 KiB)
+      js/chunk-vendors.518d8571.js
+      css/app.9c23d143.css
+      js/app.12bafefd.js
+
+
+[30;43m warning [39;49m
+
+webpack performance recommendations:
+You can limit the size of your bundles by using import() or require.ensure to lazy load some parts of your application.
+For more info visit https://webpack.js.org/guides/code-splitting/
+
+  [1;36mFile[0;39m                                 [1;36mSize[0;39m               [1;36mGzipped[0;39m
+
+  [32mdist/js/chunk-vendors.518d8571.js[39m    345.98 KiB         112.02 KiB
+  [32mdist/js/app.12bafefd.js[39m              12.40 KiB          3.23 KiB
+  [34mdist/css/app.9c23d143.css[39m            3.78 KiB           0.96 KiB
+
+  [90mImages and other types of assets omitted.[39m
+
+[30;42m DONE [39;49m Build complete. The [36mdist[39m directory is ready to be deployed.
+[30;44m INFO [39;49m Check out deployment instructions at [36mhttps://cli.vuejs.org/guide/deployment.html[39m
+
+[jdefamio@dev3 tmux-monitor]$ node
+> let userHost = 'jdefamio@dev3';
+[90mundefined[39m
+> let line = undefined
+[90mundefined[39m
+> line = 'undefined'
+[32m'undefined'[39m
+> (undefined.substr(0,userHost.length) === userHost)
+Thrown:
+TypeError: Cannot read property 'substr' of undefined
+> (line.substr(0,userHost.length) === userHost)
+[33mfalse[39m
+> line = 'jdefamio@dev3 tmux-monitor$ node'
+[32m'jdefamio@dev3 tmux-monitor$ node'[39m
+> (line.substr(0,userHost.length) === userHost)
+[33mtrue[39m
+> line
+[32m'jdefamio@dev3 tmux-monitor$ node'[39m
+> line.indexOf('m')
+[33m5[39m
+> line.substr(line.indexOf('m'))
+[32m'mio@dev3 tmux-monitor$ node'[39m
+> line.substr(line.indexOf('m')+ 1)
+[32m'io@dev3 tmux-monitor$ node'[39m
+> .exit
+[jdefamio@dev3 tmux-monitor]$ npm run build
+
+> tmux-monitor@0.1.0 build /home/jdefamio/workspace/tmux-display/tmux-vue-app/tmux-monitor
+> vue-cli-service build
+
+
+[36m⠸[39m  Building for production...
+
+[30;43m WARNING [39;49m [33mCompiled with 3 warnings[39m                                                                                                                                                                                                                                              [90m6:11:11 PM
+[39m
+[30;43m warning [39;49m
+
+asset size limit: The following asset(s) exceed the recommended size limit (244 KiB).
+This can impact web performance.
+Assets:
+  js/chunk-vendors.518d8571.js (346 KiB)
+
+[30;43m warning [39;49m
+
+entrypoint size limit: The following entrypoint(s) combined asset size exceeds the recommended limit (244 KiB). This can impact web performance.
+Entrypoints:
+  app (362 KiB)
+      js/chunk-vendors.518d8571.js
+      css/app.4d05c669.css
+      js/app.28d15d7e.js
+
+
+[30;43m warning [39;49m
+
+webpack performance recommendations:
+You can limit the size of your bundles by using import() or require.ensure to lazy load some parts of your application.
+For more info visit https://webpack.js.org/guides/code-splitting/
+
+  [1;36mFile[0;39m                                 [1;36mSize[0;39m               [1;36mGzipped[0;39m
+
+  [32mdist/js/chunk-vendors.518d8571.js[39m    345.98 KiB         112.02 KiB
+  [32mdist/js/app.28d15d7e.js[39m              12.33 KiB          3.21 KiB
+  [34mdist/css/app.4d05c669.css[39m            3.78 KiB           0.96 KiB
+
+  [90mImages and other types of assets omitted.[39m
+
+[30;42m DONE [39;49m Build complete. The [36mdist[39m directory is ready to be deployed.
+[30;44m INFO [39;49m Check out deployment instructions at [36mhttps://cli.vuejs.org/guide/deployment.html[39m
+
+[jdefamio@dev3 tmux-monitor]$ node
+> let arr = [ { "color": "white" }, { "background-color": "black" } ];
+[90mundefined[39m
+> arr
+[ { color: [32m'white'[39m }, { [32m'background-color'[39m: [32m'black'[39m } ]
+> let obj = {};
+[90mundefined[39m
+> function d(t) {
+... let k = Object.entries(t).shift();
+... obj[k[0]] = k[1];
+... }
+[90mundefined[39m
+> arr.forEach(d)
+[90mundefined[39m
+> obj
+{ color: [32m'white'[39m, [32m'background-color'[39m: [32m'black'[39m }
+> .exit
+[jdefamio@dev3 tmux-monitor]$ npm run build
+
+> tmux-monitor@0.1.0 build /home/jdefamio/workspace/tmux-display/tmux-vue-app/tmux-monitor
+> vue-cli-service build
+
+
+[36m⠙[39m  Building for production...
+
+[30;43m WARNING [39;49m [33mCompiled with 3 warnings[39m                                                                                                                                                                                                                                              [90m7:24:52 PM
+[39m
+[30;43m warning [39;49m
+
+asset size limit: The following asset(s) exceed the recommended size limit (244 KiB).
+This can impact web performance.
+Assets:
+  js/chunk-vendors.518d8571.js (346 KiB)
+
+[30;43m warning [39;49m
+
+entrypoint size limit: The following entrypoint(s) combined asset size exceeds the recommended limit (244 KiB). This can impact web performance.
+Entrypoints:
+  app (362 KiB)
+      js/chunk-vendors.518d8571.js
+      css/app.9c23d143.css
+      js/app.12bafefd.js
+
+
+[30;43m warning [39;49m
+
+webpack performance recommendations:
+You can limit the size of your bundles by using import() or require.ensure to lazy load some parts of your application.
+For more info visit https://webpack.js.org/guides/code-splitting/
+
+  [1;36mFile[0;39m                                 [1;36mSize[0;39m               [1;36mGzipped[0;39m
+
+  [32mdist/js/chunk-vendors.518d8571.js[39m    345.98 KiB         112.02 KiB
+  [32mdist/js/app.12bafefd.js[39m              12.40 KiB          3.23 KiB
+  [34mdist/css/app.9c23d143.css[39m            3.78 KiB           0.96 KiB
+
+  [90mImages and other types of assets omitted.[39m
+
+[30;42m DONE [39;49m Build complete. The [36mdist[39m directory is ready to be deployed.
+[30;44m INFO [39;49m Check out deployment instructions at [36mhttps://cli.vuejs.org/guide/deployment.html[39m
+
+[jdefamio@dev3 tmux-monitor]$ npm run build
+
+> tmux-monitor@0.1.0 build /home/jdefamio/workspace/tmux-display/tmux-vue-app/tmux-monitor
+> vue-cli-service build
+
+
+[36m⠴[39m  Building for production...
+
+[30;43m WARNING [39;49m [33mCompiled with 3 warnings[39m                                                                                                                                                                                                                                              [90m7:27:04 PM
+[39m
+[30;43m warning [39;49m
+
+asset size limit: The following asset(s) exceed the recommended size limit (244 KiB).
+This can impact web performance.
+Assets:
+  js/chunk-vendors.518d8571.js (346 KiB)
+
+[30;43m warning [39;49m
+
+entrypoint size limit: The following entrypoint(s) combined asset size exceeds the recommended limit (244 KiB). This can impact web performance.
+Entrypoints:
+  app (362 KiB)
+      js/chunk-vendors.518d8571.js
+      css/app.a885a8a1.css
+      js/app.e82f7b57.js
+
+
+[30;43m warning [39;49m
+
+webpack performance recommendations:
+You can limit the size of your bundles by using import() or require.ensure to lazy load some parts of your application.
+For more info visit https://webpack.js.org/guides/code-splitting/
+
+  [1;36mFile[0;39m                                 [1;36mSize[0;39m               [1;36mGzipped[0;39m
+
+  [32mdist/js/chunk-vendors.518d8571.js[39m    345.98 KiB         112.02 KiB
+  [32mdist/js/app.e82f7b57.js[39m              12.34 KiB          3.20 KiB
+  [34mdist/css/app.a885a8a1.css[39m            3.78 KiB           0.96 KiB
+
+  [90mImages and other types of assets omitted.[39m
+
+[30;42m DONE [39;49m Build complete. The [36mdist[39m directory is ready to be deployed.
+[30;44m INFO [39;49m Check out deployment instructions at [36mhttps://cli.vuejs.org/guide/deployment.html[39m
+
+[jdefamio@dev3 tmux-monitor]$ npm run build
+
+> tmux-monitor@0.1.0 build /home/jdefamio/workspace/tmux-display/tmux-vue-app/tmux-monitor
+> vue-cli-service build
+
+
+[36m⠼[39m  Building for production...
+
+[30;43m WARNING [39;49m [33mCompiled with 4 warnings[39m                                                                                                                                                                                                                                              [90m7:28:42 PM
+[39m
+[30;43m warning [39;49m in ./src/store.js
+
+Module Warning (from ./node_modules/thread-loader/dist/cjs.js):
+
+/home/jdefamio/workspace/tmux-display/tmux-vue-app/tmux-monitor/src/store.js
+   68:11  error  Unexpected console statement          no-console
+   74:11  error  Unexpected console statement          no-console
+   90:11  error  Unexpected console statement          no-console
+  167:32  error  'dispatch' is defined but never used  no-unused-vars
+
+✖ 4 problems (4 errors, 0 warnings)
+
+
+ @ ./src/main.js 7:0-28 14:9-14
+ @ multi ./src/main.js
+
+[30;43m warning [39;49m
+
+asset size limit: The following asset(s) exceed the recommended size limit (244 KiB).
+This can impact web performance.
+Assets:
+  js/chunk-vendors.518d8571.js (346 KiB)
+
+[30;43m warning [39;49m
+
+entrypoint size limit: The following entrypoint(s) combined asset size exceeds the recommended limit (244 KiB). This can impact web performance.
+Entrypoints:
+  app (362 KiB)
+      js/chunk-vendors.518d8571.js
+      css/app.a885a8a1.css
+      js/app.a226d257.js
+
+
+[30;43m warning [39;49m
+
+webpack performance recommendations:
+You can limit the size of your bundles by using import() or require.ensure to lazy load some parts of your application.
+For more info visit https://webpack.js.org/guides/code-splitting/
+
+  [1;36mFile[0;39m                                 [1;36mSize[0;39m               [1;36mGzipped[0;39m
+
+  [32mdist/js/chunk-vendors.518d8571.js[39m    345.98 KiB         112.02 KiB
+  [32mdist/js/app.a226d257.js[39m              12.37 KiB          3.21 KiB
+  [34mdist/css/app.a885a8a1.css[39m            3.78 KiB           0.96 KiB
+
+  [90mImages and other types of assets omitted.[39m
+
+[30;42m DONE [39;49m Build complete. The [36mdist[39m directory is ready to be deployed.
+[30;44m INFO [39;49m Check out deployment instructions at [36mhttps://cli.vuejs.org/guide/deployment.html[39m
+
+[jdefamio@dev3 tmux-monitor]$ npm run build
+
+> tmux-monitor@0.1.0 build /home/jdefamio/workspace/tmux-display/tmux-vue-app/tmux-monitor
+> vue-cli-service build
+
+
+[36m⠦[39m  Building for production...
+
+[30;43m WARNING [39;49m [33mCompiled with 3 warnings[39m                                                                                                                                                                                                                                              [90m7:30:50 PM
+[39m
+[30;43m warning [39;49m
+
+asset size limit: The following asset(s) exceed the recommended size limit (244 KiB).
+This can impact web performance.
+Assets:
+  js/chunk-vendors.518d8571.js (346 KiB)
+
+[30;43m warning [39;49m
+
+entrypoint size limit: The following entrypoint(s) combined asset size exceeds the recommended limit (244 KiB). This can impact web performance.
+Entrypoints:
+  app (362 KiB)
+      js/chunk-vendors.518d8571.js
+      css/app.7564f849.css
+      js/app.380b6436.js
+
+
+[30;43m warning [39;49m
+
+webpack performance recommendations:
+You can limit the size of your bundles by using import() or require.ensure to lazy load some parts of your application.
+For more info visit https://webpack.js.org/guides/code-splitting/
+
+  [1;36mFile[0;39m                                 [1;36mSize[0;39m               [1;36mGzipped[0;39m
+
+  [32mdist/js/chunk-vendors.518d8571.js[39m    345.98 KiB         112.02 KiB
+  [32mdist/js/app.380b6436.js[39m              12.31 KiB          3.21 KiB
+  [34mdist/css/app.7564f849.css[39m            3.78 KiB           0.96 KiB
+
+  [90mImages and other types of assets omitted.[39m
+
+[30;42m DONE [39;49m Build complete. The [36mdist[39m directory is ready to be deployed.
+[30;44m INFO [39;49m Check out deployment instructions at [36mhttps://cli.vuejs.org/guide/deployment.html[39m
+
+[jdefamio@dev3 tmux-monitor]$ npm run build
+
+> tmux-monitor@0.1.0 build /home/jdefamio/workspace/tmux-display/tmux-vue-app/tmux-monitor
+> vue-cli-service build
+
+
+[36m⠴[39m  Building for production...
+
+[30;43m WARNING [39;49m [33mCompiled with 3 warnings[39m                                                                                                                                                                                                                                              [90m7:40:44 PM
+[39m
+[30;43m warning [39;49m
+
+asset size limit: The following asset(s) exceed the recommended size limit (244 KiB).
+This can impact web performance.
+Assets:
+  js/chunk-vendors.518d8571.js (346 KiB)
+
+[30;43m warning [39;49m
+
+entrypoint size limit: The following entrypoint(s) combined asset size exceeds the recommended limit (244 KiB). This can impact web performance.
+Entrypoints:
+  app (362 KiB)
+      js/chunk-vendors.518d8571.js
+      css/app.cc0913ae.css
+      js/app.f61a1d8d.js
+
+
+[30;43m warning [39;49m
+
+webpack performance recommendations:
+You can limit the size of your bundles by using import() or require.ensure to lazy load some parts of your application.
+For more info visit https://webpack.js.org/guides/code-splitting/
+
+  [1;36mFile[0;39m                                 [1;36mSize[0;39m               [1;36mGzipped[0;39m
+
+  [32mdist/js/chunk-vendors.518d8571.js[39m    345.98 KiB         112.02 KiB
+  [32mdist/js/app.f61a1d8d.js[39m              12.31 KiB          3.21 KiB
+  [34mdist/css/app.cc0913ae.css[39m            3.82 KiB           0.97 KiB
+
+  [90mImages and other types of assets omitted.[39m
+
+[30;42m DONE [39;49m Build complete. The [36mdist[39m directory is ready to be deployed.
+[30;44m INFO [39;49m Check out deployment instructions at [36mhttps://cli.vuejs.org/guide/deployment.html[39m
+
+[jdefamio@dev3 tmux-monitor]$ tmux capture-pane -J -e -pS -2000 >> capture-pane-J.txt
+[jdefamio@dev3 tmux-monitor]$ tmux capture-pane -e -pS -2000 >> capture-pane.txt
+
